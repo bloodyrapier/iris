@@ -8,46 +8,19 @@ html{
 .container__1{
   background-color: #fff;
   overflow-x: clip;
-  background-color: blue;
 }
-.line-1, .line-2, .line-3, .line-4, .line-5, .line-6, .line-7 {
+.line-1, .line-2, .line-3, .line-4, .line-5, .line-6, .line-7  {
   position: relative;
   width: 150%;
   background-color: #B50D0D;
   border: 15px solid transparent;
-  
-  border-image-source: repeating-linear-gradient(
-    -45deg,
-    #fff 0px,
-    #fff 33px,
-    #B50D0D 10px,
-    #B50D0D 60px
-  );
-  -webkit-border-image-source: repeating-linear-gradient(
-    -45deg,
-    #fff 0px,
-    #fff 33px,
-    #B50D0D 10px,
-    #B50D0D 60px
-  );
-  
-  border-image-slice: 10;
-  -webkit-border-image-slice: 10;
-  
-  border-image-width: 15px;
-  -webkit-border-image-width: 15px;
-  
-  border-image-repeat: stretch;
-  -webkit-border-image-repeat: stretch;
   border-image: repeating-linear-gradient(
-    -45deg,
-    #fff 0px,
-    #fff 33px,
-    #B50D0D 10px,
-    #B50D0D 60px
-  ) 10 / 15px;
+  -45deg,
+  #fff 0px,
+  #fff 33px,
+  #B50D0D 10px,
+  #B50D0D 60px) 10;
 }
-
 .line-1 p, .line-2 p, .line-3 p, .line-4 p, .line-5 p, .line-6 p, .line-7 p {
   color: #ffffff;
   font-size: 33px;
