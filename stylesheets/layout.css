@@ -8,6 +8,7 @@ html{
 .container__1{
   background-color: #fff;
   overflow-x: clip;
+  background-color: blue;
 }
 .line-1, .line-2, .line-3, .line-4, .line-5, .line-6, .line-7 {
   position: relative;
