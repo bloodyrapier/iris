@@ -108,6 +108,7 @@
   0% {
     opacity: 0;
     scale: 0.8;
+    transform: translateY(0);
   }
   10% {
     opacity: 1;
@@ -119,6 +120,7 @@
   100% {
     opacity: 0;
     scale: 1.2;
+    transform: translateY(-80px);
   }
 }
 
@@ -158,4 +160,5 @@
       transform: translateY(100%);
       opacity: 0;
     }
+
 }
