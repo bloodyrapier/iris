@@ -5,6 +5,8 @@
     }
     .background{
         top: 85%;
+        text-shadow: 
+        0 0 80px #B50D0D,
     }
     .line-1{
         transform: rotate(3deg);
@@ -51,4 +53,5 @@
     .merilyn-container {
         width: auto;
     }
+
 }
