@@ -1,0 +1,500 @@
+html{
+  margin: 0;
+  padding: 0;
+}
+
+ /* Контейнер с бегущими строками  */
+
+.container__1{
+  background-color: #fff;
+  overflow-x: clip;
+}
+.line-1, .line-2, .line-3, .line-4, .line-5, .line-6, .line-7  {
+  position: relative;
+  width: 150%;
+  background-color: #B50D0D;
+  border: 15px solid transparent;
+  border-image: repeating-linear-gradient(
+  -45deg,
+  #fff 0px,
+  #fff 33px,
+  #B50D0D 10px,
+  #B50D0D 60px) 10;
+}
+.line-1 p, .line-2 p, .line-3 p, .line-4 p, .line-5 p, .line-6 p, .line-7 p {
+  color: #ffffff;
+  font-size: 33px;
+  margin: 10px;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  font-family: 'InterBlack';
+  letter-spacing: 1.5px;
+}
+.line-2 p, .line-4 p, .line-6 p {
+  animation: line-left 5s linear infinite;
+}
+.line-1 p, .line-3 p, .line-5 p, .line-7 p {
+  animation: line-right 5s linear infinite;
+}
+.line-1{
+  transform: rotate(3deg);
+  margin: 80px -20px;
+  z-index: 1;
+}
+.line-2{
+  transform: rotate(6.5deg);
+  margin: 135px -30px;
+  z-index: 1;
+}
+.line-3{
+  transform: rotate(-3deg);
+  margin: -275px -30px;
+  z-index: 2;
+}
+.line-4{
+  transform: rotate(5deg);
+  margin: 420px -30px;
+  z-index: 1;
+}
+.line-5{
+  transform: rotate(5deg);
+  margin: -120px -30px;
+  z-index: 3;
+}
+.line-6{
+  transform: rotate(-1.5deg);
+  margin: 130px -30px;
+  z-index: 2;
+}
+.line-7{
+  transform: rotate(6deg);
+  margin: 0 -30px;
+}
+.background{
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  font-size: 42vw;
+  color: #B50D0D;
+  -webkit-text-stroke: 20px #B50D0D;
+  text-shadow: 
+    0 0 200px #B50D0D,
+    0 0 80px #B50D0D,
+    0 0 50px #B50D0D;
+  font-family: 'ArialRegular';
+  z-index: 0;
+  animation: stroke-pulse 1.5s infinite alternate;
+}
+
+ /* Контейнер с парами  */
+
+.container__2 {
+  background-color: #B50D0D;
+  overflow: hidden;
+  --angle: 6deg;
+  clip-path: polygon(
+  0 1px,
+  100% calc(100vw * tan(var(--angle)) - 1px),
+  100% calc(100%),
+  0 calc(100%));
+  margin-top: -7%;
+}
+.block-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 30% 0 5%;
+  align-items: center;
+}
+.left-star {
+  width: 50vw;
+}
+.right-star {
+  width: 48vw;
+}
+.block-left, .block-right {
+  position: relative;
+}
+.block-left img {
+  margin: 50px 20px 0;
+}
+.block-right img {
+  margin-left: -70px;
+}
+.block-left .left-pair,
+.block-right .right-pair {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.left-pair {
+  width: 35vw;
+  padding: 0 12% 25% 0;
+  animation: leftPair 5s ease-in-out infinite;
+}
+.right-pair {
+  width: 35vw; 
+  padding: 0 0 20% 0;
+  animation: rightPair 5s ease-in-out infinite;
+}
+.block-left .left-pair,
+.block-right .right-pair {
+  margin: 0;
+}
+.hearts {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.heart {
+  position: absolute;
+  width: 7vw;
+  animation: hearts 5s linear infinite;
+  opacity: 0;
+}
+.hearts-left .heart-1 {
+  top: -5%;
+  left: 10%;
+  animation-delay: 0.2s;
+}
+.hearts-left .heart-2 {
+  top: -45%;
+  left: 20%;
+  transform: rotate(5deg);
+  animation-delay: 0.4s;
+}
+.hearts-left .heart-3 {
+  top: -25%;
+  left: 30%;
+  transform: scaleX(-1);
+  animation-delay: 0.6s;
+}
+.hearts-left .heart-4 {
+  top: -45%;
+  left: 50%;
+  transform: scaleX(-1) rotate(25deg);
+  animation-delay: 0.8s;
+}
+.hearts-left .heart-5 {
+  top: -15%;
+  left: 50%;
+  transform: scaleX(-1) rotate(5deg);
+  animation-delay: 1s;
+}
+.hearts-right .heart-6 {
+  top: -20%;
+  right: 20%;
+  transform: rotate(5deg);
+  animation-delay: 0.3s;
+}
+.hearts-right .heart-7 {
+  top: 5%;
+  right: 18%;
+  transform: scaleX(-1) rotate(25deg);
+  animation-delay: 1s;
+}
+.hearts-right .heart-8 {
+  top: -12%;
+  right: 45%;
+  transform: rotate(20deg);
+  animation-delay: 0.7s;
+}
+.hearts-right .heart-9 {
+  top: -25%;
+  right: 65%;
+  transform: rotate(-55deg);
+  animation-delay: 0.9s;
+}
+.hearts-right .heart-10 {
+  top: 5%;
+  right: 70%;
+  transform: scaleX(-1) rotate(-10deg);
+  animation-delay: 1.1s;
+}
+.left-star, .right-star {
+ animation: star 5s ease-in-out infinite;
+}
+
+ /* Контейнер с наведением на фигуры  */
+
+.container__3 {
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+  padding: 50px 0;
+}
+.wrapper {
+  position: relative;
+  width: 25vw;
+  height: 30vw;
+}
+.wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation-duration: 3s; 
+  animation-timing-function: steps(1);
+  animation-iteration-count: infinite;
+}
+.image1 {
+  animation: cycle;
+  animation-delay: 0s;
+}
+.image2 {
+  animation: cycle;
+  animation-delay: 2.5s;
+}
+.image3 {
+  animation: cycle;
+  animation-delay: 2s;
+}
+.image4 {
+  animation: cycle;
+  animation-delay: 1.5s;
+}
+.image5 {
+  animation: cycle;
+  animation-delay: 1s;
+}
+.image6 {
+  animation: cycle;
+  animation-delay: 0.5s;
+}
+.description {
+  position: absolute;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  color: white;
+  font-size: 3vw;
+  font-family: 'ArialBold';
+  text-align: center;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+.wrapper:hover .description {
+  opacity: 1;
+}
+.wrapper:hover img {
+  animation-play-state: paused;
+}
+
+ /* Контейнер с наведением на мерлин монро  */
+
+.container__4 {
+  background-color: #B50D0D;
+  position: relative;
+  overflow: hidden;
+}
+.sections {
+  display: flex;
+  justify-content: space-around;
+  align-items:baseline;
+  position: relative;
+  padding-top: 150px;
+}
+.merilyn-container {
+  position: relative;
+  max-width: 400px;
+}
+.merilyn {
+  width: 100%;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+.kiss-group {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.kiss {
+  position: absolute;
+  width: 15%;
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+}
+.kiss1 {
+  top: 25%;
+  left: 30%;
+  rotate: 10deg;
+}
+.kiss2 {
+  top: 10%;
+  left: 33%;
+  rotate: 5deg;
+}
+.kiss3 {
+  top: 15%;
+  left: 45%;
+  rotate: 70deg;
+}
+.kiss4 {
+  top: 10%;
+  left: 40%;
+  rotate: 10deg;
+}
+.kiss5 {
+  top: 25%;
+  left: 35%; 
+  rotate: 10deg;
+}
+.kiss6 {
+  top: 20%;
+  left: 60%;
+  rotate: 60deg;
+}
+.left-merilyn:hover ~ .kiss-group .kiss1 {
+  animation: kiss 3s infinite;
+  animation-delay: 0s;
+}
+.left-merilyn:hover ~ .kiss-group .kiss2 {
+  animation: kiss 3s infinite;
+  animation-delay: 0.3s;
+}
+.left-merilyn:hover ~ .kiss-group .kiss3 {
+  animation: kiss 3s infinite;
+  animation-delay: 0.6s;
+}
+.right-merilyn:hover ~ .kiss-group .kiss4 {
+  animation: kiss 3s infinite;
+  animation-delay: 0s;
+}
+.right-merilyn:hover ~ .kiss-group .kiss5 {
+  animation: kiss 3s infinite;
+  animation-delay: 0.3s;
+}
+.right-merilyn:hover ~ .kiss-group .kiss6 {
+  animation: kiss 3s infinite;
+  animation-delay: 0.6s;
+}
+.fallinghearts {
+  position: relative;
+  width: auto;
+  min-height: 300px;
+}
+.fallinghearts img {
+  height: 5vw;
+  opacity: 0;
+} 
+.fallinghearts-container {
+  position: relative;
+}
+.falling-heart {
+  position: absolute;
+  top: -200px;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  z-index: 1;
+}
+.heart1 {
+  left: 5px;
+  rotate: -5deg;
+  animation: fallDown 8s infinite;
+  animation-delay: 0s;
+}
+.heart2 {
+  left: -20px;
+  rotate: 25deg;
+  animation: fallDown 7s infinite;
+  animation-delay: 2s;
+}
+.heart3 {
+  right: 25px;
+  rotate: -20deg;
+  animation: fallDown 9s infinite;
+  animation-delay: 3s;
+}
+.heart4 {
+  left: 15px;
+  rotate: 5deg;
+  animation: fallDown 6.5s infinite;
+  animation-delay: 4s;
+}
+.heart5 {
+  right: -10px;
+  rotate: -10deg;
+  animation: fallDown 8.5s infinite;
+  animation-delay: 5s;
+}
+.heart6 {
+  left: -45px;
+  rotate: 5deg;
+  animation: fallDown 7.5s infinite;
+  animation-delay: 6s;
+}
+.heart7 {
+  left: -20px;
+  rotate: 35deg;
+  animation: fallDown 9.5s infinite;
+  animation-delay: 7s;
+}
+.heart8 {
+  right: -20px;
+  rotate: 35deg;
+  animation: fallDown 10s infinite;
+  animation-delay: 8s;
+}
+
+ /* футер  */
+
+footer{
+  overflow: hidden;
+  max-height: 400px;
+}
+.footer-container{
+  display: flex;
+  justify-content: space-around;
+}
+.dev{
+  padding-top: 40px;
+  color: #B50D0D;
+  font-size: 3vw;
+  font-family: 'ArialBold';
+  margin-left: 20px;
+  height: 40vh;
+  animation: dev-scroll 6s linear infinite;
+}
+.footer-star {
+  position: relative;
+  display: inline-block;
+}
+.star-img {
+  width: 100%;
+  animation: star 4s ease-in-out infinite;
+}
+.pair-img {
+  width: 90%;
+  position: absolute;
+  top: 55%;
+  left: 55%;
+  animation: leftPair 4s ease-in-out infinite;
+}
+.footer-star img{
+  width: 100%;
+}
+.footer-pair{
+  position: absolute;
+  bottom: 11%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-pair img {
+  width: 65%;
+}

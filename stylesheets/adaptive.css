@@ -1,0 +1,54 @@
+@media only screen and (max-width: 768px) {
+    .container__2 {
+        margin-top: -5%;
+        padding-top: 10%;
+    }
+    .background{
+        top: 85%;
+    }
+    .line-1{
+        transform: rotate(3deg);
+        margin: 50px -20px;
+        z-index: 1;
+    }
+    .line-4{
+        margin: 250px -30px;
+    }
+    .line-6{
+        margin: 90px -30px;
+    }
+    .fallinghearts img {
+        height: 15vw;
+    }
+    .block-right .right-pair {
+        top: 45%;
+        left: 40%;
+    }
+    footer{
+        max-height: 200px;
+    } 
+    .dev{
+        font-size: 22px;
+    }
+    .footer-star img{
+       width: 100%;
+       padding: 10px 0 0 15%;
+    }
+    .pair-img {
+       max-width: 55%;
+       top: 45%;
+       left: 60%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+     .background{
+        top: 50%;
+    }
+    .fallinghearts img {
+        height: 10vw;
+    }
+    .merilyn-container {
+        width: auto;
+    }
+}

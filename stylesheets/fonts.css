@@ -1,0 +1,12 @@
+@font-face {
+    src: url("../fonts/Inter/Inter-Black.otf") format("opentype"); 
+    font-family: "InterBlack";
+} 
+@font-face {
+    src: url("../fonts/Arial/Arial-Regular.ttf") format("truetype"); 
+    font-family: "ArialRegular";
+} 
+@font-face {
+    src: url("../fonts/Arial/Arial-Bold.ttf") format("truetype"); 
+    font-family: "ArialBold";
+} 
